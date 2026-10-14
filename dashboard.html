@@ -1,107 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="tailwind.config.js"></script>
-    <title>Transera</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trips | Transera</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="bg-white dark:bg-gray-900">
-  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-      <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Transera Booking System</h2>
-          <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">Book Now!</p>
+  <header class="top">
+    <a class="logo" href="dashboard.html">🚐 Transera</a>
+    <nav class="tabs">
+      <a class="tab on" href="dashboard.html">Trips</a>
+      <a class="tab" href="bookings.html">My bookings</a>
+    </nav>
+    <a class="btn ghost" href="login.html">Log out</a>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <h1>Where to next?</h1>
+      <p>Picked up at your door, dropped off at your destination.</p>
+    </section>
+    <h2 class="sec">Upcoming trips</h2>
+    <div class="list">
+        <a class="trip" href="#trip1">
+          <div>
+            <h3>Mindoro <span aria-hidden="true">→</span> PITX</h3>
+            <p class="muted">Tonight · 8:00 PM</p>
+            <span class="pill">6 seats available</span>
+          </div>
+          <div class="price"><strong>₱750</strong><small>per seat</small></div>
+        </a>
+        <a class="trip" href="#trip2">
+          <div>
+            <h3>Mindoro <span aria-hidden="true">→</span> Batangas City</h3>
+            <p class="muted">Tomorrow · 6:30 AM</p>
+            <span class="pill low">2 seats available</span>
+          </div>
+          <div class="price"><strong>₱350</strong><small>per seat</small></div>
+        </a>
+        <a class="trip" href="#trip3">
+          <div>
+            <h3>Mindoro <span aria-hidden="true">→</span> Cubao</h3>
+            <p class="muted">Tomorrow · 9:00 AM</p>
+            <span class="pill">9 seats available</span>
+          </div>
+          <div class="price"><strong>₱300</strong><small>per seat</small></div>
+        </a>
+    </div>
+  </main>
+
+  <!-- TRIP 1 -->
+  <div class="modal" id="trip1">
+    <a class="backdrop" href="#" aria-label="Close"></a>
+    <article class="sheet">
+      <a class="close" href="#" aria-label="Close">✕</a>
+      <h2>Mindoro → PITX</h2>
+      <p class="muted">Tonight · 8:00 PM</p>
+      <h4>Driver &amp; van</h4>
+      <div class="driver">
+        <span class="avatar">R</span>
+        <div><strong>Ruel Santos · ★ 4.9</strong><p class="muted">Toyota HiAce GL Grandia · NBC 4521</p><p class="muted">0917 555 0142</p></div>
       </div>
-      <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
-          <!-- Pricing Card -->
-          <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-              <h3 class="mb-4 text-2xl font-semibold">Mindoro - Manila</h3>
-              <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Departure 6am</p>
-              <div class="flex justify-center items-baseline my-8">
-                  <span class="mr-2 text-5xl font-extrabold">400</span>
-                  <span class="text-gray-500 dark:text-gray-300">/Seat</span>
-              </div>
-              <!-- List -->
-              <ul role="list" class="mb-8 space-y-4 text-left">
-                  <li class="flex items-center space-x-3">
-                      <!-- Icon -->
-                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Good Service</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                      <!-- Icon -->
-                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Good Driver</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                      <!-- Icon -->
-                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Unit: <span class="font-semibold">Toyota Hiace</span></span>
-                  </li>
-              </ul>
-              <a href="#" class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">View Booking</a>
-          </div>
-          <!-- Pricing Card -->
-          <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-              <h3 class="mb-4 text-2xl font-semibold">Midoro To San Jose</h3>
-              <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Departure 9pm</p>
-              <div class="flex justify-center items-baseline my-8">
-                  <span class="mr-2 text-5xl font-extrabold">300</span>
-                  <span class="text-gray-500 dark:text-gray-400">/seat</span>
-              </div>
-                <!-- List -->
-              <ul role="list" class="mb-8 space-y-4 text-left">
-                  <li class="flex items-center space-x-3">
-                      <!-- Icon -->
-                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Good Service</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                      <!-- Icon -->
-                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Good Driver</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                      <!-- Icon -->
-                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Unit: <span class="font-semibold">Navara</span></span>
-                  </li>
-              </ul>
-              <a href="#" class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">View Booking</a>
-          </div>
-          <!-- Pricing Card -->
-          <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-              <h3 class="mb-4 text-2xl font-semibold">Mindoro - Batangas</h3>
-              <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Departure 4pm</p>
-              <div class="flex justify-center items-baseline my-8">
-                  <span class="mr-2 text-5xl font-extrabold">800</span>
-                  <span class="text-gray-500 dark:text-gray-400">/seat</span>
-              </div>
-             <!-- List -->
-              <ul role="list" class="mb-8 space-y-4 text-left">
-                  <li class="flex items-center space-x-3">
-                      <!-- Icon -->
-                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Good Service</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                      <!-- Icon -->
-                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Good Driver</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                      <!-- Icon -->
-                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Unit: <span class="font-semibold">Hiace</span></span>
-                  </li>
-              </ul>
-              <a href="#" class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">View Booking</a>
-          </div>
-</section>
+      <h4>Services</h4>
+      <ul class="chips"><li>Door-to-door</li><li>Aircon</li><li>WiFi</li><li>Charging</li><li>Luggage</li></ul>
+      <h4>Choose your seat</h4>
+      <div class="van-frame">
+        <div class="van">
+          <span class="glass"></span>
+          <span class="driver-seat"><i class="wheel"></i><small>Driver</small></span><span class="aisle"></span><span class="seat"><input type="checkbox" id="s1-2" disabled><label for="s1-2">2</label></span><span class="seat"><input type="checkbox" id="s1-3" disabled><label for="s1-3">3</label></span>
+            <span class="seat"><input type="checkbox" id="s1-4"><label for="s1-4">4</label></span><span class="aisle"></span><span class="seat"><input type="checkbox" id="s1-5" disabled><label for="s1-5">5</label></span><span class="seat"><input type="checkbox" id="s1-6" disabled><label for="s1-6">6</label></span>
+            <span class="seat"><input type="checkbox" id="s1-7"><label for="s1-7">7</label></span><span class="aisle"></span><span class="seat"><input type="checkbox" id="s1-8"><label for="s1-8">8</label></span><span class="seat"><input type="checkbox" id="s1-9" disabled><label for="s1-9">9</label></span>
+            <span class="seat"><input type="checkbox" id="s1-10"><label for="s1-10">10</label></span><span class="aisle"></span><span class="seat"><input type="checkbox" id="s1-11"><label for="s1-11">11</label></span><span class="seat"><input type="checkbox" id="s1-12"><label for="s1-12">12</label></span>
+        </div>
+        <p class="count">Seats selected: </p>
+        <p class="legend"><span class="k free"></span>Available <span class="k mine"></span>Selected <span class="k gone"></span>Taken</p>
+      </div>
+      <div class="foot"><span class="price"><strong>₱750</strong><small>per seat</small></span><a class="btn" href="#booked">Book now</a></div>
+    </article>
+  </div>
 
+  <!-- TRIP 2 -->
+  <div class="modal" id="trip2">
+    <a class="backdrop" href="#" aria-label="Close"></a>
+    <article class="sheet">
+      <a class="close" href="#" aria-label="Close">✕</a>
+      <h2>Mindoro → Batangas City</h2>
+      <p class="muted">Tomorrow · 6:30 AM</p>
+      <h4>Driver &amp; van</h4>
+      <div class="driver">
+        <span class="avatar">D</span>
+        <div><strong>Dennis Reyes · ★ 4.7</strong><p class="muted">Nissan Urvan Premium · ABX 7730</p><p class="muted">0918 555 0177</p></div>
+      </div>
+      <h4>Services</h4>
+      <ul class="chips"><li>Door-to-door</li><li>Aircon</li><li>Charging</li></ul>
+      <h4>Choose your seat</h4>
+      <div class="van-frame">
+        <div class="van">
+          <span class="glass"></span>
+          <span class="driver-seat"><i class="wheel"></i><small>Driver</small></span><span class="aisle"></span><span class="seat"><input type="checkbox" id="s2-2" disabled><label for="s2-2">2</label></span><span class="seat"><input type="checkbox" id="s2-3" disabled><label for="s2-3">3</label></span>
+            <span class="seat"><input type="checkbox" id="s2-4" disabled><label for="s2-4">4</label></span><span class="aisle"></span><span class="seat"><input type="checkbox" id="s2-5" disabled><label for="s2-5">5</label></span><span class="seat"><input type="checkbox" id="s2-6" disabled><label for="s2-6">6</label></span>
+            <span class="seat"><input type="checkbox" id="s2-7" disabled><label for="s2-7">7</label></span><span class="aisle"></span><span class="seat"><input type="checkbox" id="s2-8" disabled><label for="s2-8">8</label></span><span class="seat"><input type="checkbox" id="s2-9" disabled><label for="s2-9">9</label></span>
+            <span class="seat"><input type="checkbox" id="s2-10" disabled><label for="s2-10">10</label></span><span class="aisle"></span><span class="seat"><input type="checkbox" id="s2-11"><label for="s2-11">11</label></span><span class="seat"><input type="checkbox" id="s2-12"><label for="s2-12">12</label></span>
+        </div>
+        <p class="count">Seats selected: </p>
+        <p class="legend"><span class="k free"></span>Available <span class="k mine"></span>Selected <span class="k gone"></span>Taken</p>
+      </div>
+      <div class="foot"><span class="price"><strong>₱350</strong><small>per seat</small></span><a class="btn" href="#booked">Book now</a></div>
+    </article>
+  </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.js"></script>
+  <!-- TRIP 3 -->
+  <div class="modal" id="trip3">
+    <a class="backdrop" href="#" aria-label="Close"></a>
+    <article class="sheet">
+      <a class="close" href="#" aria-label="Close">✕</a>
+      <h2>Mindoro → Cubao</h2>
+      <p class="muted">Tomorrow · 9:00 AM</p>
+      <h4>Driver &amp; van</h4>
+      <div class="driver">
+        <span class="avatar">J</span>
+        <div><strong>Jun Dela Cruz · ★ 4.8</strong><p class="muted">Hyundai Starex · DKL 1189</p><p class="muted">0920 555 0108</p></div>
+      </div>
+      <h4>Services</h4>
+      <ul class="chips"><li>Door-to-door</li><li>Aircon</li><li>WiFi</li><li>Free water</li></ul>
+      <h4>Choose your seat</h4>
+      <div class="van-frame">
+        <div class="van">
+          <span class="glass"></span>
+          <span class="driver-seat"><i class="wheel"></i><small>Driver</small></span><span class="aisle"></span><span class="seat"><input type="checkbox" id="s3-2" disabled><label for="s3-2">2</label></span><span class="seat"><input type="checkbox" id="s3-3"><label for="s3-3">3</label></span>
+            <span class="seat"><input type="checkbox" id="s3-4" disabled><label for="s3-4">4</label></span><span class="aisle"></span><span class="seat"><input type="checkbox" id="s3-5"><label for="s3-5">5</label></span><span class="seat"><input type="checkbox" id="s3-6"><label for="s3-6">6</label></span>
+            <span class="seat"><input type="checkbox" id="s3-7"><label for="s3-7">7</label></span><span class="aisle"></span><span class="seat"><input type="checkbox" id="s3-8"><label for="s3-8">8</label></span><span class="seat"><input type="checkbox" id="s3-9"><label for="s3-9">9</label></span>
+            <span class="seat"><input type="checkbox" id="s3-10"><label for="s3-10">10</label></span><span class="aisle"></span><span class="seat"><input type="checkbox" id="s3-11"><label for="s3-11">11</label></span><span class="seat"><input type="checkbox" id="s3-12"><label for="s3-12">12</label></span>
+        </div>
+        <p class="count">Seats selected: </p>
+        <p class="legend"><span class="k free"></span>Available <span class="k mine"></span>Selected <span class="k gone"></span>Taken</p>
+      </div>
+      <div class="foot"><span class="price"><strong>₱300</strong><small>per seat</small></span><a class="btn" href="#booked">Book now</a></div>
+    </article>
+  </div>
+
+  <!-- BOOKED -->
+  <div class="modal" id="booked">
+    <a class="backdrop" href="#" aria-label="Close"></a>
+    <article class="sheet center">
+      <p class="big">✅</p>
+      <h2>You're booked!</h2>
+      <p class="muted">Your driver will contact you before pickup.</p>
+      <div class="actions">
+        <a class="btn" href="bookings.html">View my bookings</a>
+        <a class="btn ghost" href="#">Back to trips</a>
+      </div>
+    </article>
+  </div>
+
 </body>
 </html>

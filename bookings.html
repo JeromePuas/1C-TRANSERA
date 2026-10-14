@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Transera</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="logo" href="dashboard.html">🚐 Transera</a>
+    <nav class="tabs">
+      <a class="tab" href="dashboard.html">Trips</a>
+      <a class="tab on" href="bookings.html">My bookings</a>
+    </nav>
+    <a class="btn ghost" href="login.html">Log out</a>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <h1>My bookings</h1>
+      <p>Your upcoming and past rides, all in one place.</p>
+    </section>
+
+    <h2 class="sec">Upcoming</h2>
+    <div class="list">
+      <article class="booking">
+        <input type="checkbox" id="cancel1" class="cancel-toggle">
+        <div class="b-head">
+          <div>
+            <h3>Mindoro → PITX</h3>
+            <p class="muted">Tonight · 8:00 PM</p>
+          </div>
+          <span class="status ok on-active">Confirmed</span>
+          <span class="status off on-cancelled">Cancelled</span>
+        </div>
+        <dl class="b-info">
+          <div><dt>Seats</dt><dd>4, 7</dd></div>
+          <div><dt>Total</dt><dd>₱1,500</dd></div>
+          <div><dt>Booking ID</dt><dd>TR-20418</dd></div>
+        </dl>
+        <p class="b-line"><b>Pickup</b>Calapan City, Oriental Mindoro</p>
+        <p class="b-line"><b>Drop-off</b>PITX, Parañaque</p>
+        <p class="b-line"><b>Driver</b>Ruel Santos · NBC 4521 · 0917 555 0142</p>
+        <div class="b-actions">
+          <a class="btn ghost" href="dashboard.html#trip1">View trip</a>
+          <label class="btn ghost danger on-active" for="cancel1">Cancel booking</label>
+          <label class="btn ghost on-cancelled" for="cancel1">Undo cancel</label>
+        </div>
+      </article>
+      <article class="booking">
+        <input type="checkbox" id="cancel2" class="cancel-toggle">
+        <div class="b-head">
+          <div>
+            <h3>Mindoro → Batangas City</h3>
+            <p class="muted">Tomorrow · 6:30 AM</p>
+          </div>
+          <span class="status wait on-active">Pending driver</span>
+          <span class="status off on-cancelled">Cancelled</span>
+        </div>
+        <dl class="b-info">
+          <div><dt>Seats</dt><dd>11</dd></div>
+          <div><dt>Total</dt><dd>₱350</dd></div>
+          <div><dt>Booking ID</dt><dd>TR-20433</dd></div>
+        </dl>
+        <p class="b-line"><b>Pickup</b>Roxas, Oriental Mindoro</p>
+        <p class="b-line"><b>Drop-off</b>Batangas Grand Terminal</p>
+        <p class="b-line"><b>Driver</b>Dennis Reyes · ABX 7730 · 0918 555 0177</p>
+        <div class="b-actions">
+          <a class="btn ghost" href="dashboard.html#trip2">View trip</a>
+          <label class="btn ghost danger on-active" for="cancel2">Cancel booking</label>
+          <label class="btn ghost on-cancelled" for="cancel2">Undo cancel</label>
+        </div>
+      </article>
+    </div>
+
+    <h2 class="sec">Past trips</h2>
+    <div class="list">
+      <article class="booking past">
+        <div class="b-head">
+          <div>
+            <h3>Cubao → Mindoro</h3>
+            <p class="muted">Last week · 9:00 AM</p>
+          </div>
+          <span class="status done">Completed</span>
+        </div>
+        <dl class="b-info">
+          <div><dt>Seats</dt><dd>5</dd></div>
+          <div><dt>Total</dt><dd>₱300</dd></div>
+          <div><dt>Booking ID</dt><dd>TR-19877</dd></div>
+        </dl>
+        <p class="b-line"><b>Driver</b>Jun Dela Cruz · DKL 1189</p>
+        <div class="b-actions"><a class="btn ghost" href="dashboard.html">Book again</a></div>
+      </article>
+    </div>
+  </main>
+</body>
+</html>
