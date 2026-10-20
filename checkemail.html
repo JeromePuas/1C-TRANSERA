@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Check your email | Transera</title>
-  <link rel="stylesheet" href="style.css">
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Transera</title>
+ <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+ <script src="tailwind.config.js"></script>
 </head>
-<body class="auth-page">
-  <main>
-    <section class="auth center">
-      <p class="logo">🚐 Transera</p>
-      <p class="big">📬</p>
-      <h1>Check your email</h1>
-      <p class="muted">If an account exists for that email, a password reset link is on its way.</p>
-      <a class="btn" href="login.html">Back to log in</a>
-      <p class="muted"><a href="forgot-password.html">Use a different email</a></p>
-    </section>
-  </main>
+<body class="bg-base dark:bg-base-dark text-slate-900 dark:text-primary-50 font-body leading-normal min-h-screen grid place-items-center p-5">
+ <main class="w-full grid place-items-center">
+ <section class="bg-surface dark:bg-surface-dark border border-primary-100 dark:border-primary-900 w-full max-w-sm rounded-2xl px-7 py-9 grid gap-3.5">
+ <p class="inline-flex items-center gap-2.5 font-bold text-xl tracking-tight text-slate-900 dark:text-primary-50"><span class="grid place-items-center w-8 h-8 rounded-lg bg-primary-600 text-white text-base font-bold" aria-hidden="true">T</span>Transera</p>
+ <span class="mx-auto grid place-items-center w-14 h-14 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-300"><svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+ <h1 class="text-3xl leading-tight tracking-tight font-bold text-center">Check your email</h1>
+ <p class="text-sm text-slate-500 dark:text-primary-300 text-center">If an account exists for that email, we’ve sent a link to reset your password. It can take a few minutes to arrive, so check your spam folder if you don’t see it.</p>
+ <a class="inline-block bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg px-5 py-3 text-center transition cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500" href="login.html">Back to log in</a>
+ <p class="text-sm text-slate-500 dark:text-primary-300 text-center"><a class="text-primary-600 dark:text-primary-400" href="forgot-password.html">Use a different email</a></p>
+ </section>
+ </main>
 </body>
 </html>

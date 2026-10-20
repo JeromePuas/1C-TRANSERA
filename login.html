@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Log in | Transera</title>
-  <link rel="stylesheet" href="style.css">
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Transera</title>
+ <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+ <script src="tailwind.config.js"></script>
 </head>
-<body class="auth-page">
-  <main>
-    <form class="auth" action="dashboard.html">
-      <p class="logo">🚐 Transera</p>
-      <h1>Welcome back</h1>
-      <p class="muted">Log in to book your next trip.</p>
-      <label>Email<input type="email" placeholder="Ronquillojerome@gmail.com" autocomplete="email" required></label>
-      <label>Password<input type="password" minlength="8" placeholder="Password" autocomplete="current-password" required></label>
-      <p class="forgot"><a href="forgot-password.html">Forgot password?</a></p>
-      <button class="btn" type="submit">Log in</button>
-      <p class="muted center">Don't have an account? <a href="register.html">Sign up</a></p>
-    </form>
-  </main>
+<body class="bg-base dark:bg-base-dark text-slate-900 dark:text-primary-50 font-body leading-normal min-h-screen grid place-items-center p-5">
+ <main class="w-full grid place-items-center">
+ <form class="bg-surface dark:bg-surface-dark border border-primary-100 dark:border-primary-900 w-full max-w-sm rounded-2xl px-7 py-9 grid gap-3.5" action="dashboard.html">
+ <p class="inline-flex items-center gap-2.5 font-bold text-xl tracking-tight text-slate-900 dark:text-primary-50"><span class="grid place-items-center w-8 h-8 rounded-lg bg-primary-600 text-white text-base font-bold" aria-hidden="true">T</span>Transera</p>
+ <h1 class="text-3xl leading-tight tracking-tight font-bold">Welcome back</h1>
+ <p class="text-sm text-slate-500 dark:text-primary-300">Log in to book seats and manage your trips.</p>
+ <label class="grid gap-1.5 text-sm font-medium text-slate-700 dark:text-primary-200">Email<input class="w-full px-3.5 py-3 rounded-lg border border-primary-200 dark:border-primary-800 bg-base dark:bg-base-dark text-slate-900 dark:text-primary-50 font-normal placeholder:text-slate-400 dark:placeholder:text-primary-400/60 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500" type="email" placeholder="Ronquillojerome@gmail.com" autocomplete="email" required></label>
+ <label class="grid gap-1.5 text-sm font-medium text-slate-700 dark:text-primary-200">Password<input class="w-full px-3.5 py-3 rounded-lg border border-primary-200 dark:border-primary-800 bg-base dark:bg-base-dark text-slate-900 dark:text-primary-50 font-normal placeholder:text-slate-400 dark:placeholder:text-primary-400/60 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500" type="password" placeholder="Your password" autocomplete="current-password" minlength="8" required></label>
+ <p class="text-right text-sm -mt-1.5"><a class="text-primary-600 dark:text-primary-400" href="forgot-password.html">Forgot password?</a></p>
+ <button class="inline-block bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg px-5 py-3 text-center transition cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500" type="submit">Log in</button>
+ <p class="text-sm text-slate-500 dark:text-primary-300 text-center">New to Transera? <a class="text-primary-600 dark:text-primary-400" href="register.html">Create an account</a></p>
+ </form>
+ </main>
 </body>
 </html>

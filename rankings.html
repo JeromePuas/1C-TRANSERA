@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Transera</title>
+ <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+ <script src="tailwind.config.js"></script>
+</head>
+<body class="bg-base dark:bg-base-dark text-slate-900 dark:text-primary-50 font-body leading-normal lg:pl-64">
+ <input type="checkbox" id="nav-toggle" class="peer sr-only">
+ <aside class="fixed inset-y-0 left-0 z-30 w-64 flex flex-col gap-5 px-3.5 py-6 bg-surface dark:bg-surface-dark border-r border-primary-100 dark:border-primary-900 -translate-x-full peer-checked:translate-x-0 transition-transform lg:translate-x-0">
+ <a class="inline-flex items-center gap-2.5 font-bold text-xl tracking-tight text-slate-900 dark:text-primary-50" href="dashboard.html"><span class="grid place-items-center w-8 h-8 rounded-lg bg-primary-600 text-white text-base font-bold" aria-hidden="true">T</span>Transera</a>
+ <nav class="grid gap-1">
+ <a class="flex items-center px-3.5 py-2.5 rounded-lg font-semibold text-slate-500 dark:text-primary-300 hover:bg-primary-100 hover:text-primary-600 dark:hover:bg-primary-900" href="dashboard.html">Trips</a>
+ <a class="flex items-center px-3.5 py-2.5 rounded-lg font-semibold text-slate-500 dark:text-primary-300 hover:bg-primary-100 hover:text-primary-600 dark:hover:bg-primary-900" href="bookings.html">My bookings</a>
+ <a class="flex items-center px-3.5 py-2.5 rounded-lg font-semibold bg-primary-100 text-primary-600 dark:bg-primary-900 dark:text-primary-300" href="rankings.html">Rankings</a>
+ </nav>
+ <a class="mt-auto flex items-center px-3.5 py-2.5 rounded-lg font-semibold text-slate-500 dark:text-primary-300 hover:bg-primary-100 hover:text-primary-600 dark:hover:bg-primary-900" href="login.html">Log out</a>
+ </aside>
+ <label for="nav-toggle" class="fixed inset-0 z-20 hidden bg-slate-950/55 peer-checked:block lg:peer-checked:hidden"></label>
+ <header class="sticky top-0 z-10 flex flex-wrap items-center justify-between gap-2.5 px-5 py-3.5 bg-base/90 dark:bg-base-dark/90 border-b border-primary-100 dark:border-primary-900 lg:justify-end">
+ <label class="lg:hidden grid place-items-center w-10 h-9 rounded-lg border border-primary-100 dark:border-primary-900 cursor-pointer" for="nav-toggle" aria-label="Menu"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></label>
+ <a class="inline-flex items-center gap-2.5 font-bold text-xl tracking-tight text-slate-900 dark:text-primary-50 lg:hidden" href="dashboard.html"><span class="grid place-items-center w-8 h-8 rounded-lg bg-primary-600 text-white text-base font-bold" aria-hidden="true">T</span>Transera</a>
+ <a class="inline-block bg-transparent border border-primary-100 dark:border-primary-900 font-semibold rounded-lg px-3.5 py-2 text-center cursor-pointer hover:bg-primary-100/60 dark:hover:bg-primary-900/50 transition" href="login.html">Log out</a>
+ </header>
+ <main class="max-w-3xl mx-auto p-5">
+ <section class="mb-8">
+ <h1 class="text-[clamp(1.6rem,5vw,2rem)] leading-tight tracking-tight font-bold">Rankings</h1>
+ <p class="text-slate-600 dark:text-primary-300 mt-1.5">See which drivers and amenities riders rate highest.</p>
+ </section>
+ <div class="flex flex-wrap">
+ <input type="radio" name="rank" id="r-drivers" class="peer/drivers sr-only" checked>
+ <input type="radio" name="rank" id="r-services" class="peer/services sr-only">
+ <label for="r-drivers" class="px-5 py-2.5 text-sm font-bold cursor-pointer bg-primary-100 dark:bg-primary-900 text-slate-500 dark:text-primary-300 mb-4 rounded-l-xl peer-checked/drivers:bg-surface peer-checked/drivers:dark:bg-surface-dark peer-checked/drivers:text-primary-600 dark:peer-checked/drivers:text-primary-300">Top drivers</label>
+ <label for="r-services" class="px-5 py-2.5 text-sm font-bold cursor-pointer bg-primary-100 dark:bg-primary-900 text-slate-500 dark:text-primary-300 mb-4 rounded-r-xl peer-checked/services:bg-surface peer-checked/services:dark:bg-surface-dark peer-checked/services:text-primary-600 dark:peer-checked/services:text-primary-300">Top services</label>
+ <div class="w-full basis-full hidden peer-checked/drivers:grid gap-3">
+ <article class="bg-surface dark:bg-surface-dark border border-primary-100 dark:border-primary-900 border-l-4 border-l-amber-400 rounded-xl p-5 flex items-center gap-3.5 !p-4">
+ <span class="flex-none w-11 text-center text-lg font-bold text-slate-500 dark:text-primary-300">#1</span>
+ <div class="flex-1 min-w-0"><h3 class="font-bold">Jerome Ronquillo</h3><p class="text-sm text-slate-500 dark:text-primary-300">Toyota HiAce GL Grandia, plate NBC 4521. 312 trips completed</p></div>
+ <div class="text-right text-xl font-bold text-primary-600 dark:text-primary-400">4.9<small class="block text-xs font-normal text-slate-500 dark:text-primary-300">out of 5</small></div>
+ </article>
+ <article class="bg-surface dark:bg-surface-dark border border-primary-100 dark:border-primary-900 border-l-4 border-l-slate-400 rounded-xl p-5 flex items-center gap-3.5 !p-4">
+ <span class="flex-none w-11 text-center text-lg font-bold text-slate-500 dark:text-primary-300">#2</span>
+ <div class="flex-1 min-w-0"><h3 class="font-bold"></h3>Jerik Rosales<p class="text-sm text-slate-500 dark:text-primary-300">Hyundai Starex, plate DKL 1189. 276 trips completed</p></div>
+ <div class="text-right text-xl font-bold text-primary-600 dark:text-primary-400">4.8<small class="block text-xs font-normal text-slate-500 dark:text-primary-300">out of 5</small></div>
+ </article>
+ <article class="bg-surface dark:bg-surface-dark border border-primary-100 dark:border-primary-900 border-l-4 border-l-[#c2733a] rounded-xl p-5 flex items-center gap-3.5 !p-4">
+ <span class="flex-none w-11 text-center text-lg font-bold text-slate-500 dark:text-primary-300">#3</span>
+ <div class="flex-1 min-w-0"><h3 class="font-bold"></h3>Von Jemuel Reyes<p class="text-sm text-slate-500 dark:text-primary-300">Nissan Urvan Premium, plate ABX 7730. 241 trips completed</p></div>
+ <div class="text-right text-xl font-bold text-primary-600 dark:text-primary-400">4.7<small class="block text-xs font-normal text-slate-500 dark:text-primary-300">out of 5</small></div>
+ </article>
+ </div>
+ <div class="w-full basis-full hidden peer-checked/services:grid gap-3">
+ <article class="bg-surface dark:bg-surface-dark border border-primary-100 dark:border-primary-900 border-l-4 border-l-amber-400 rounded-xl p-5 flex items-center gap-3.5 !p-4">
+ <span class="flex-none w-11 text-center text-lg font-bold text-slate-500 dark:text-primary-300">#1</span>
+ <div class="flex-1 min-w-0"><h3 class="font-bold">Door-to-door</h3><p class="text-sm text-slate-500 dark:text-primary-300">Pickup and drop-off at your address</p></div>
+ <div class="text-right text-xl font-bold text-primary-600 dark:text-primary-400">4.9<small class="block text-xs font-normal text-slate-500 dark:text-primary-300">out of 5</small></div>
+ </article>
+ <article class="bg-surface dark:bg-surface-dark border border-primary-100 dark:border-primary-900 border-l-4 border-l-slate-400 rounded-xl p-5 flex items-center gap-3.5 !p-4">
+ <span class="flex-none w-11 text-center text-lg font-bold text-slate-500 dark:text-primary-300">#2</span>
+ <div class="flex-1 min-w-0"><h3 class="font-bold">Aircon</h3><p class="text-sm text-slate-500 dark:text-primary-300">Cool, comfortable ride</p></div>
+ <div class="text-right text-xl font-bold text-primary-600 dark:text-primary-400">4.8<small class="block text-xs font-normal text-slate-500 dark:text-primary-300">out of 5</small></div>
+ </article>
+ <article class="bg-surface dark:bg-surface-dark border border-primary-100 dark:border-primary-900 border-l-4 border-l-[#c2733a] rounded-xl p-5 flex items-center gap-3.5 !p-4">
+ <span class="flex-none w-11 text-center text-lg font-bold text-slate-500 dark:text-primary-300">#3</span>
+ <div class="flex-1 min-w-0"><h3 class="font-bold">WiFi</h3><p class="text-sm text-slate-500 dark:text-primary-300">Stay connected on the road</p></div>
+ <div class="text-right text-xl font-bold text-primary-600 dark:text-primary-400">4.6<small class="block text-xs font-normal text-slate-500 dark:text-primary-300">out of 5</small></div>
+ </article>
+ <article class="bg-surface dark:bg-surface-dark border border-primary-100 dark:border-primary-900 border-l-4 border-l-primary-600 dark:border-l-primary-400 rounded-xl p-5 flex items-center gap-3.5 !p-4">
+ <span class="flex-none w-11 text-center text-lg font-bold text-slate-500 dark:text-primary-300">#4</span>
+ <div class="flex-1 min-w-0"><h3 class="font-bold">Charging</h3><p class="text-sm text-slate-500 dark:text-primary-300">Ports at every row</p></div>
+ <div class="text-right text-xl font-bold text-primary-600 dark:text-primary-400">4.6<small class="block text-xs font-normal text-slate-500 dark:text-primary-300">out of 5</small></div>
+ </article>
+ <article class="bg-surface dark:bg-surface-dark border border-primary-100 dark:border-primary-900 border-l-4 border-l-primary-600 dark:border-l-primary-400 rounded-xl p-5 flex items-center gap-3.5 !p-4">
+ <span class="flex-none w-11 text-center text-lg font-bold text-slate-500 dark:text-primary-300">#5</span>
+ <div class="flex-1 min-w-0"><h3 class="font-bold">Free water</h3><p class="text-sm text-slate-500 dark:text-primary-300">Complimentary on select trips</p></div>
+ <div class="text-right text-xl font-bold text-primary-600 dark:text-primary-400">4.5<small class="block text-xs font-normal text-slate-500 dark:text-primary-300">out of 5</small></div>
+ </article>
+ <article class="bg-surface dark:bg-surface-dark border border-primary-100 dark:border-primary-900 border-l-4 border-l-primary-600 dark:border-l-primary-400 rounded-xl p-5 flex items-center gap-3.5 !p-4">
+ <span class="flex-none w-11 text-center text-lg font-bold text-slate-500 dark:text-primary-300">#6</span>
+ <div class="flex-1 min-w-0"><h3 class="font-bold">Luggage</h3><p class="text-sm text-slate-500 dark:text-primary-300">Extra space for bags</p></div>
+ <div class="text-right text-xl font-bold text-primary-600 dark:text-primary-400">4.4<small class="block text-xs font-normal text-slate-500 dark:text-primary-300">out of 5</small></div>
+ </article>
+ </div>
+ </div>
+ </main>
+</body>
+</html>

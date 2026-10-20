@@ -1,97 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Transera</title>
-  <link rel="stylesheet" href="style.css">
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Transera</title>
+ <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+ <script src="tailwind.config.js"></script>
 </head>
-<body>
-  <header class="top">
-    <a class="logo" href="dashboard.html">🚐 Transera</a>
-    <nav class="tabs">
-      <a class="tab" href="dashboard.html">Trips</a>
-      <a class="tab on" href="bookings.html">My bookings</a>
-    </nav>
-    <a class="btn ghost" href="login.html">Log out</a>
-  </header>
-  <main class="wrap">
-    <section class="hero">
-      <h1>My bookings</h1>
-      <p>Your upcoming and past rides, all in one place.</p>
-    </section>
-
-    <h2 class="sec">Upcoming</h2>
-    <div class="list">
-      <article class="booking">
-        <input type="checkbox" id="cancel1" class="cancel-toggle">
-        <div class="b-head">
-          <div>
-            <h3>Mindoro → PITX</h3>
-            <p class="muted">Tonight · 8:00 PM</p>
-          </div>
-          <span class="status ok on-active">Confirmed</span>
-          <span class="status off on-cancelled">Cancelled</span>
-        </div>
-        <dl class="b-info">
-          <div><dt>Seats</dt><dd>4, 7</dd></div>
-          <div><dt>Total</dt><dd>₱1,500</dd></div>
-          <div><dt>Booking ID</dt><dd>TR-20418</dd></div>
-        </dl>
-        <p class="b-line"><b>Pickup</b>Calapan City, Oriental Mindoro</p>
-        <p class="b-line"><b>Drop-off</b>PITX, Parañaque</p>
-        <p class="b-line"><b>Driver</b>Ruel Santos · NBC 4521 · 0917 555 0142</p>
-        <div class="b-actions">
-          <a class="btn ghost" href="dashboard.html#trip1">View trip</a>
-          <label class="btn ghost danger on-active" for="cancel1">Cancel booking</label>
-          <label class="btn ghost on-cancelled" for="cancel1">Undo cancel</label>
-        </div>
-      </article>
-      <article class="booking">
-        <input type="checkbox" id="cancel2" class="cancel-toggle">
-        <div class="b-head">
-          <div>
-            <h3>Mindoro → Batangas City</h3>
-            <p class="muted">Tomorrow · 6:30 AM</p>
-          </div>
-          <span class="status wait on-active">Pending driver</span>
-          <span class="status off on-cancelled">Cancelled</span>
-        </div>
-        <dl class="b-info">
-          <div><dt>Seats</dt><dd>11</dd></div>
-          <div><dt>Total</dt><dd>₱350</dd></div>
-          <div><dt>Booking ID</dt><dd>TR-20433</dd></div>
-        </dl>
-        <p class="b-line"><b>Pickup</b>Roxas, Oriental Mindoro</p>
-        <p class="b-line"><b>Drop-off</b>Batangas Grand Terminal</p>
-        <p class="b-line"><b>Driver</b>Dennis Reyes · ABX 7730 · 0918 555 0177</p>
-        <div class="b-actions">
-          <a class="btn ghost" href="dashboard.html#trip2">View trip</a>
-          <label class="btn ghost danger on-active" for="cancel2">Cancel booking</label>
-          <label class="btn ghost on-cancelled" for="cancel2">Undo cancel</label>
-        </div>
-      </article>
-    </div>
-
-    <h2 class="sec">Past trips</h2>
-    <div class="list">
-      <article class="booking past">
-        <div class="b-head">
-          <div>
-            <h3>Cubao → Mindoro</h3>
-            <p class="muted">Last week · 9:00 AM</p>
-          </div>
-          <span class="status done">Completed</span>
-        </div>
-        <dl class="b-info">
-          <div><dt>Seats</dt><dd>5</dd></div>
-          <div><dt>Total</dt><dd>₱300</dd></div>
-          <div><dt>Booking ID</dt><dd>TR-19877</dd></div>
-        </dl>
-        <p class="b-line"><b>Driver</b>Jun Dela Cruz · DKL 1189</p>
-        <div class="b-actions"><a class="btn ghost" href="dashboard.html">Book again</a></div>
-      </article>
-    </div>
-  </main>
+<body class="bg-base dark:bg-base-dark text-slate-900 dark:text-primary-50 font-body leading-normal lg:pl-64">
+ <input type="checkbox" id="nav-toggle" class="peer sr-only">
+ <aside class="fixed inset-y-0 left-0 z-30 w-64 flex flex-col gap-5 px-3.5 py-6 bg-surface dark:bg-surface-dark border-r border-primary-100 dark:border-primary-900 -translate-x-full peer-checked:translate-x-0 transition-transform lg:translate-x-0">
+ <a class="inline-flex items-center gap-2.5 font-bold text-xl tracking-tight text-slate-900 dark:text-primary-50" href="dashboard.html"><span class="grid place-items-center w-8 h-8 rounded-lg bg-primary-600 text-white text-base font-bold" aria-hidden="true">T</span>Transera</a>
+ <nav class="grid gap-1">
+ <a class="flex items-center px-3.5 py-2.5 rounded-lg font-semibold text-slate-500 dark:text-primary-300 hover:bg-primary-100 hover:text-primary-600 dark:hover:bg-primary-900" href="dashboard.html">Trips</a>
+ <a class="flex items-center px-3.5 py-2.5 rounded-lg font-semibold bg-primary-100 text-primary-600 dark:bg-primary-900 dark:text-primary-300" href="bookings.html">My bookings</a>
+ <a class="flex items-center px-3.5 py-2.5 rounded-lg font-semibold text-slate-500 dark:text-primary-300 hover:bg-primary-100 hover:text-primary-600 dark:hover:bg-primary-900" href="rankings.html">Rankings</a>
+ </nav>
+ <a class="mt-auto flex items-center px-3.5 py-2.5 rounded-lg font-semibold text-slate-500 dark:text-primary-300 hover:bg-primary-100 hover:text-primary-600 dark:hover:bg-primary-900" href="login.html">Log out</a>
+ </aside>
+ <label for="nav-toggle" class="fixed inset-0 z-20 hidden bg-slate-950/55 peer-checked:block lg:peer-checked:hidden"></label>
+ <header class="sticky top-0 z-10 flex flex-wrap items-center justify-between gap-2.5 px-5 py-3.5 bg-base/90 dark:bg-base-dark/90 border-b border-primary-100 dark:border-primary-900 lg:justify-end">
+ <label class="lg:hidden grid place-items-center w-10 h-9 rounded-lg border border-primary-100 dark:border-primary-900 cursor-pointer" for="nav-toggle" aria-label="Menu"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></label>
+ <a class="inline-flex items-center gap-2.5 font-bold text-xl tracking-tight text-slate-900 dark:text-primary-50 lg:hidden" href="dashboard.html"><span class="grid place-items-center w-8 h-8 rounded-lg bg-primary-600 text-white text-base font-bold" aria-hidden="true">T</span>Transera</a>
+ <a class="inline-block bg-transparent border border-primary-100 dark:border-primary-900 font-semibold rounded-lg px-3.5 py-2 text-center cursor-pointer hover:bg-primary-100/60 dark:hover:bg-primary-900/50 transition" href="login.html">Log out</a>
+ </header>
+ <main class="max-w-3xl mx-auto p-5">
+ <section class="mb-8">
+ <h1 class="text-[clamp(1.6rem,5vw,2rem)] leading-tight tracking-tight font-bold">My bookings</h1>
+ <p class="text-slate-600 dark:text-primary-300 mt-1.5">Check your upcoming rides, manage a booking, or rebook a past trip.</p>
+ </section>
+ <h2 class="text-xl font-bold mt-6 mb-3">Upcoming</h2>
+ <div class="grid gap-3">
+ <article class="bg-surface dark:bg-surface-dark border border-primary-100 dark:border-primary-900 border-l-4 border-l-primary-600 dark:border-l-primary-400 rounded-xl p-5 group relative grid gap-3 has-[:checked]:opacity-70 has-[:checked]:border-l-slate-400">
+ <input type="checkbox" id="cancel1" class="sr-only">
+ <div class="flex items-start justify-between gap-3">
+ <div><h3 class="text-lg font-bold group-has-[:checked]:line-through">Mindoro to PITX</h3><p class="text-sm text-slate-500 dark:text-primary-300">Tonight at 8:00 PM</p></div>
+ <span class="px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-primary-100 text-primary-600 dark:bg-primary-900 dark:text-primary-300 group-has-[:checked]:hidden">Confirmed</span>
+ <span class="px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-200 text-slate-500 dark:bg-primary-900 dark:text-primary-300 hidden group-has-[:checked]:inline-block">Cancelled</span>
+ </div>
+ <dl class="grid grid-cols-3 gap-2.5 p-3 bg-base dark:bg-base-dark rounded-xl">
+ <div><dt class="text-xs text-slate-500 dark:text-primary-300">Seats</dt><dd class="mt-0.5 font-bold">4, 7</dd></div>
+ <div><dt class="text-xs text-slate-500 dark:text-primary-300">Total</dt><dd class="mt-0.5 font-bold">₱1,500</dd></div>
+ <div><dt class="text-xs text-slate-500 dark:text-primary-300">Booking ID</dt><dd class="mt-0.5 font-bold">TR-20418</dd></div>
+ </dl>
+ <p class="text-sm text-slate-500 dark:text-primary-300"><b class="inline-block min-w-[76px] text-slate-900 dark:text-primary-50">Pickup</b>Mamburao, Terminal</p>
+ <p class="text-sm text-slate-500 dark:text-primary-300"><b class="inline-block min-w-[76px] text-slate-900 dark:text-primary-50">Drop-off</b>PITX, Parañaque</p>
+ <p class="text-sm text-slate-500 dark:text-primary-300"><b class="inline-block min-w-[76px] text-slate-900 dark:text-primary-50">Driver</b>Jerik Rosales, NBC 4521, 0917 555 0142</p>
+ <div class="flex flex-wrap gap-2">
+ <a class="inline-block bg-transparent border border-primary-100 dark:border-primary-900 font-semibold rounded-lg px-3.5 py-2 text-center cursor-pointer hover:bg-primary-100/60 dark:hover:bg-primary-900/50 transition" href="dashboard.html#trip1">View trip</a>
+ <label class="inline-block bg-transparent border border-primary-100 dark:border-primary-900 font-semibold rounded-lg px-3.5 py-2 text-center cursor-pointer hover:bg-primary-100/60 dark:hover:bg-primary-900/50 transition text-red-700 dark:text-red-400 group-has-[:checked]:hidden" for="cancel1">Cancel booking</label>
+ <label class="inline-block bg-transparent border border-primary-100 dark:border-primary-900 font-semibold rounded-lg px-3.5 py-2 text-center cursor-pointer hover:bg-primary-100/60 dark:hover:bg-primary-900/50 transition hidden group-has-[:checked]:inline-block" for="cancel1">Undo cancel</label>
+ </div>
+ </article>
+ <article class="bg-surface dark:bg-surface-dark border border-primary-100 dark:border-primary-900 border-l-4 border-l-primary-600 dark:border-l-primary-400 rounded-xl p-5 group relative grid gap-3 has-[:checked]:opacity-70 has-[:checked]:border-l-slate-400">
+ <input type="checkbox" id="cancel2" class="sr-only">
+ <div class="flex items-start justify-between gap-3">
+ <div><h3 class="text-lg font-bold group-has-[:checked]:line-through">Mindoro to Batangas City</h3><p class="text-sm text-slate-500 dark:text-primary-300">Tomorrow at 6:30 AM</p></div>
+ <span class="px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-400 group-has-[:checked]:hidden">Awaiting driver</span>
+ <span class="px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-200 text-slate-500 dark:bg-primary-900 dark:text-primary-300 hidden group-has-[:checked]:inline-block">Cancelled</span>
+ </div>
+ <dl class="grid grid-cols-3 gap-2.5 p-3 bg-base dark:bg-base-dark rounded-xl">
+ <div><dt class="text-xs text-slate-500 dark:text-primary-300">Seats</dt><dd class="mt-0.5 font-bold">11</dd></div>
+ <div><dt class="text-xs text-slate-500 dark:text-primary-300">Total</dt><dd class="mt-0.5 font-bold">₱350</dd></div>
+ <div><dt class="text-xs text-slate-500 dark:text-primary-300">Booking ID</dt><dd class="mt-0.5 font-bold">TR-20433</dd></div>
+ </dl>
+ <p class="text-sm text-slate-500 dark:text-primary-300"><b class="inline-block min-w-[76px] text-slate-900 dark:text-primary-50">Pickup</b>Mamburao, Terminal</p>
+ <p class="text-sm text-slate-500 dark:text-primary-300"><b class="inline-block min-w-[76px] text-slate-900 dark:text-primary-50">Drop-off</b>Batangas Grand Terminal</p>
+ <p class="text-sm text-slate-500 dark:text-primary-300"><b class="inline-block min-w-[76px] text-slate-900 dark:text-primary-50">Driver</b>Jerome Ronquillo, ABX 7730, 0918 555 0177</p>
+ <div class="flex flex-wrap gap-2">
+ <a class="inline-block bg-transparent border border-primary-100 dark:border-primary-900 font-semibold rounded-lg px-3.5 py-2 text-center cursor-pointer hover:bg-primary-100/60 dark:hover:bg-primary-900/50 transition" href="dashboard.html#trip2">View trip</a>
+ <label class="inline-block bg-transparent border border-primary-100 dark:border-primary-900 font-semibold rounded-lg px-3.5 py-2 text-center cursor-pointer hover:bg-primary-100/60 dark:hover:bg-primary-900/50 transition text-red-700 dark:text-red-400 group-has-[:checked]:hidden" for="cancel2">Cancel booking</label>
+ <label class="inline-block bg-transparent border border-primary-100 dark:border-primary-900 font-semibold rounded-lg px-3.5 py-2 text-center cursor-pointer hover:bg-primary-100/60 dark:hover:bg-primary-900/50 transition hidden group-has-[:checked]:inline-block" for="cancel2">Undo cancel</label>
+ </div>
+ </article>
+ </div>
+ <h2 class="text-xl font-bold mt-6 mb-3">Past trips</h2>
+ <div class="grid gap-3">
+ <article class="bg-surface dark:bg-surface-dark border border-primary-100 dark:border-primary-900 border-l-4 border-l-slate-400 rounded-xl p-5 grid gap-3">
+ <div class="flex items-start justify-between gap-3">
+ <div><h3 class="text-lg font-bold">Cubao to Mindoro</h3><p class="text-sm text-slate-500 dark:text-primary-300">Last week at 9:00 AM</p></div>
+ <span class="px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-200 text-slate-500 dark:bg-primary-900 dark:text-primary-300">Completed</span>
+ </div>
+ <dl class="grid grid-cols-3 gap-2.5 p-3 bg-base dark:bg-base-dark rounded-xl">
+ <div><dt class="text-xs text-slate-500 dark:text-primary-300">Seats</dt><dd class="mt-0.5 font-bold">5</dd></div>
+ <div><dt class="text-xs text-slate-500 dark:text-primary-300">Total</dt><dd class="mt-0.5 font-bold">₱300</dd></div>
+ <div><dt class="text-xs text-slate-500 dark:text-primary-300">Booking ID</dt><dd class="mt-0.5 font-bold">TR-19877</dd></div>
+ </dl>
+ <p class="text-sm text-slate-500 dark:text-primary-300"><b class="inline-block min-w-[76px] text-slate-900 dark:text-primary-50">Driver</b>Von Jemuel Reyes, DKL 1189</p>
+ <div class="flex flex-wrap gap-2"><a class="inline-block bg-transparent border border-primary-100 dark:border-primary-900 font-semibold rounded-lg px-3.5 py-2 text-center cursor-pointer hover:bg-primary-100/60 dark:hover:bg-primary-900/50 transition" href="dashboard.html">Book again</a></div>
+ </article>
+ </div>
+ </main>
 </body>
 </html>
